@@ -1,42 +1,140 @@
-# git-work-flow
+
+# DESCRIPTION 
+Create a branching model to help team understand the Git Feature Branch Workflow for faster and efficient integration of work
 
 
-# Working on feature2 
+
+### Working on feature2 
 =======
 changes in feature 2 for update
 
 merging feature2 into Integration Branch
 
 
-#Working on Feature1
+### Working on Feature1
 =======
 merging feature1 into HotFix
 merging feature1 into Integration
 merging feature1 into Production
 
-# making some changes into Hotfix before merging into Integration and Production
+### making some changes into Hotfix before merging into Integration and Production
 
 
-# Step1 : Creating repository and Initialising Branches
 
- mkdir git-work-flow
- cd git-work-flow
- git init
+# Steps taken-
+
+
+## Step1 : Creating repository and Initialising Branches
+```
+mkdir git-work-flow
+cd git-work-flow
+git init
+```
  
  
- ## Adding a readme file (Default editor  : VS Code)
-  
-  touch README.md
-  git add README.md
-  git commit -m "First Commit"
+ ### Adding a readme file (Default editor  : VS Code)
+  ```
+touch README.md
+git add README.md
+git commit -m "First Commit"
+  ```
  
- ## Creating HotFix  and integration Branch
- 
-  git branch HotFix
-  git branch Integration
+ ### Creating HotFix  and integration Branch
+ ```
+git branch HotFix
+git branch Integration
+```
+
+## Step2 :  Creating Feature1 and Feature2 Branches
+```
+git branch Feature1
+git Branch Feature2
+```
+
+## Step3 : Making changes in Feature2 , Creating pull Request and merging it to Integration Branch
+```
+vi README.md
+```
+### Creating pull request
+```
+git push Integration Feature2
+```
+### Merging with Integration
+```
+git checkout Integration
+git merge --no-f Feature2
+
+git branch --delete Feature2
+```
+
+## Step4 : Committing some changes in Feature1 and rebase it to Integration Branch
+```
+vi README.md
+git add 
+git commit -m "Changes in Feature1"
+git checkout Feature1
+git rebase Integration
+```
+
+## Step5 : Create Pull Request, add 2 reviewers, get the PR reviewed & Merge the Integration branch into Hotfix and Production branch to update these branches
+```
+git checkout Integration
+git push Hotfix Integration
+git push Production Integration
+
+git checkout Hotfix
+git merge Integration
+
+git checkout Production
+git merge Integration
+
+git status
+
+```
+
+## Step6 : Commit some changes in Feature 1 branch, and then Create Pull Request, add 2 reviewers,get the PR reviewed & merge it into Integration, Hotfix, and Production branch. Delete this branch once merging is complete
+```
+vi README.md
+git add 
+git commit -m "Changes in Feature1"
+git checkout Feature1
+git push feature1
+
+git checkout Hotfix
+git merge Feature1
+
+git checkout Production
+git merge Feature1
+
+git checkout Integration
+git merge Feature1
+
+git branch --delete Feature
+
+```
+
+## Step7 : Commit some changes in the Hotfix branch and Create Pull Request, add 2 reviewers, get the PR reviewed & merge it into the Production as well as the Integration branch
+```
+vi README.md
+git add 
+git commit -m "Changes in Hotfix"
+
+git checkout Hotfix
+git push feature1
+
+git checkout Production
+git merge Hotfix
+
+git checkout Integration
+git merge Hotfix
+
+```
+
+Note - I have done PR reviews using Github UI
 
 
-# Creating Feature1 and Feature2 Branches
 
-  git branch Feature1
-  git Branch Feature2
+
+
+
+
