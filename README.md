@@ -14,4 +14,4 @@ changes in feature 2 for update
 
 # merging feature into Production
 
-#making some changes into Hotfix before merging into Integration and Production
+# making some changes into Hotfix before merging into Integration and Production
