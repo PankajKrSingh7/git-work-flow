@@ -55,9 +55,8 @@ git Branch Feature2
 ```
 vi README.md
 ```
-### Creating pull request
+### Creating pull request using Github
 ```
-git push Integration Feature2
 ```
 ### Merging with Integration
 ```
@@ -79,8 +78,7 @@ git rebase Integration
 ## Step5 : Create Pull Request, add 2 reviewers, get the PR reviewed & Merge the Integration branch into Hotfix and Production branch to update these branches
 ```
 git checkout Integration
-git push Hotfix Integration
-git push Production Integration
+creating pull request using GitHub
 
 git checkout Hotfix
 git merge Integration
@@ -98,7 +96,7 @@ vi README.md
 git add 
 git commit -m "Changes in Feature1"
 git checkout Feature1
-git push feature1
+creating pull request using github
 
 git checkout Hotfix
 git merge Feature1
@@ -120,7 +118,7 @@ git add
 git commit -m "Changes in Hotfix"
 
 git checkout Hotfix
-git push feature1
+creating pull request using github
 
 git checkout Production
 git merge Hotfix
