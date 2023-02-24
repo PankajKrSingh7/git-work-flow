@@ -78,7 +78,7 @@ git rebase Integration
 ## Step5 : Create Pull Request, add 2 reviewers, get the PR reviewed & Merge the Integration branch into Hotfix and Production branch to update these branches
 ```
 git checkout Integration
-creating pull request using GitHub
+--creating pull request using GitHub
 
 git checkout Hotfix
 git merge Integration
@@ -96,7 +96,7 @@ vi README.md
 git add 
 git commit -m "Changes in Feature1"
 git checkout Feature1
-creating pull request using github
+--creating pull request using github
 
 git checkout Hotfix
 git merge Feature1
