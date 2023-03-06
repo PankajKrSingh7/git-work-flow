@@ -49,8 +49,8 @@ git branch --delete Feature2
 vi README.md
 git add 
 git commit -m "Changes in Feature1"
-git checkout Feature1
-git rebase Integration
+git checkout Integration
+git rebase Feature1
 ```
 
 ## Step5 : Create Pull Request, add 2 reviewers, get the PR reviewed & Merge the Integration branch into Hotfix and Production branch to update these branches
@@ -73,7 +73,7 @@ git status
 vi README.md
 git add 
 git commit -m "Changes in Feature1"
-git checkout Feature1
+git checkout Integration
 --creating pull request using github
 
 git checkout Hotfix
